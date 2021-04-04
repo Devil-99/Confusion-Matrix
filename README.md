@@ -58,3 +58,17 @@ It can be directly interpreted by,
 ```python
 print("Accuracy = ",metrics.accuracy_score(y_actual, y_predicted)*100)
 ```
+
+The confusion matrix gives you a lot of information, but sometimes you may prefer a more concise metric. 
+
+# Precision
+precision = (TP) / (TP+FP)
+TP is the number of true positives, and FP is the number of false positives. 
+A trivial way to have perfect precision is to make one single positive prediction and ensure it is correct (precision = 1/1 = 100%). This would not be very useful since the classifier would ignore all but one positive instance. 
+ 
+
+# Recall
+recall = (TP) / (TP+FN)
+
+It is often convenient to combine precision and recall into a single metric called the F1 score, in particular, if you need a simple way to compare two classifiers. 
+The F1 score is the harmonic mean of precision and recall 
